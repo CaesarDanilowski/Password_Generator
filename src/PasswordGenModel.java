@@ -46,8 +46,12 @@ public class PasswordGenModel {
     }
 
     public void setLengthOfPassword(int length) { lengthOfPassword = length; }
+
     public void setUpperCases(boolean value) { upperCases = value; }
+
     public void setLowerCases(boolean value) { lowerCases = value; }
+
     public void setDigits(boolean value) { digits = value; }
+
     public void setSpecialChars(boolean value) { specialChars = value; }
 }

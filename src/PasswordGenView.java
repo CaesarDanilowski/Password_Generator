@@ -22,11 +22,13 @@ public class PasswordGenView extends JFrame {
     private JButton evaluate = new JButton("Generate");
     private JTextArea passwordsArea = new JTextArea();
 
-    public PasswordGenView() {
+    public PasswordGenView(PasswordGenMenu menu) {
         setTitle(TITLE);
         setSize(WIDTH, HEIGHT);
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        setJMenuBar(menu);
 
         leftPanel.add(new JLabel("Passwords"));
         leftPanel.add(howManyPasswords);
@@ -69,6 +71,8 @@ public class PasswordGenView extends JFrame {
     public int getLength() {
         return Integer.valueOf(lengthOfPassword.getText());
     }
+
+    public String getPasswordsArea() { return passwordsArea.getText().toString(); }
 
     public boolean isUpperCases() {
         return useUpperCase.isSelected();
